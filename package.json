@@ -2,7 +2,7 @@
   "name": "react-complete-guide",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://vaxen91.github.io/react-demo",
+  "homepage": "https://vaxen91.github.io/react-axios-demo-blog/",
   "dependencies": {
     "axios": "^0.18.0",
     "gh-pages": "^1.2.0",
