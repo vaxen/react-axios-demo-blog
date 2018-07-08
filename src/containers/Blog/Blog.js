@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Route, Link, Switch, Redirect } from 'react-router-dom'
 import NewPost from './NewPost/NewPost'
+
 import Posts from './Posts/Posts'
 import './Blog.css'
 
