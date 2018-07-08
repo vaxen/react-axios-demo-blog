@@ -6,7 +6,7 @@ import Blog from './containers/Blog/Blog'
 class App extends Component {
   render () {
     return (
-      <BrowserRouter basename='/'>
+      <BrowserRouter basename='/react-axios-demo-blog'>
         <div className='App'>
           <Blog />
         </div>
