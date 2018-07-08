@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import { Route, Link, Switch } from 'react-router-dom'
+import { Route, Link, Switch, Redirect } from 'react-router-dom'
 import NewPost from './NewPost/NewPost'
-import FullPost from './FullPost/FullPost'
 import Posts from './Posts/Posts'
 import './Blog.css'
 
@@ -12,16 +11,17 @@ class Blog extends Component {
         <header>
           <nav>
             <ul>
-              <li><Link to='/'>Home</Link></li>
+              <li><Link to='/posts'>Posts</Link></li>
               <li><Link to='/new-post'>New Post</Link></li>
             </ul>
           </nav>
         </header>
         {/* {<Route path='/' exact='true' render={() => <h1>Home</h1>} />} */}
         <Switch>
-          <Route path='/' exact component={Posts} />
+          <Route path='/posts' component={Posts} />
+          <Redirect from='/' exact to='/posts' />
           <Route path='/new-post' exact component={NewPost} />
-          <Route path='/posts/:id' exact component={FullPost} />
+          <Route render={() => <h1>404 Not found</h1>} />
         </Switch>
       </div>
     )
